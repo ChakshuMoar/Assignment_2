@@ -4,3 +4,64 @@
     width: 100%;
     height: auto;
 }
+
+.btn {
+    padding: 0px;
+}
+
+.col_1 {
+    background: url(../img/non_hero_left.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 24px;
+    /* margin: 10px 10px; */
+}
+
+.col_1 h2 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: 80px;
+}
+
+.col_1 li {
+    padding-bottom: 10px;
+    margin-left: 80px;  
+}
+
+.col_1 li a {
+    color: red;
+}
+
+.col_2 {
+    background: url(../img/teachers.jpeg) center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: aqua;
+}
+.col_3 {
+    background: url(../img/students.jpeg) center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: blue;
+}
+
+.col_4 {
+    background: url(../img/medal.jpeg) center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: brown;
+}
+
+.map-container-2{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container-2 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}

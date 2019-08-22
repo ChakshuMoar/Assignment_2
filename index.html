@@ -8,8 +8,10 @@
 <link rel="stylesheet" href="./css/960_12_col.css">
 <link rel="stylesheet" href="./css/test.css">
 <link rel="stylesheet" href="./css/styling_index.css">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <title></title>
@@ -21,8 +23,14 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
 <div class="container-fluid">
     <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+        </button>
     <a class="navbar-brand" href="#">INDOCTRINATION</a>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
     <li class="active"><a href="#">Home</a></li>
     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
@@ -35,9 +43,10 @@
     <li><a href="#">Page 2</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    <li><a href="#" data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    <li><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
+    </div>
 </div>
 </nav>
 
@@ -89,7 +98,177 @@
                   <span class="sr-only">Next</span>
                 </a>
               </div>    
-</div>    
+</div>   
 
+<div class="modal fade" id="myModal1" role="dialog">
+  <div class="modal-dialog">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Registration Form</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" action="/action_page.php">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Enter Email:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Enter Password:</label>
+            <div class="col-sm-10">          
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Confirm Password:</label>
+            <div class="col-sm-10">          
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+          </div>
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<div class="modal fade" id="myModal2" role="dialog">
+  <div class="modal-dialog">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Registration Form</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" action="/action_page.php">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10">          
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+          </div>
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<div class="container-fluid">
+    
+  <div class="row">
+      <div class="col-sm-6 col_1">
+          <h2>Disciplines</h2>
+          <ul>
+              <li><a href="#">4-10 Grade</a></li>
+              <li><a href="#">10-12 Grade </a></li>
+              <li><a href="#">IIT-JEE</a></li>
+              <li><a href="#">NEET</a></li>
+          </ul>
+      </div>
+      <div class="col-sm-6 col_2">
+          <h3>Faculty</h3>
+          <p>These are our faculty</p>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-sm-6 col_3">
+        <h3>Students</h3>
+        <p>Overall Development stories</p>
+      </div>
+      <div class="col-sm-6 col_4">
+        <h3>Achievements</h3>
+        <p>Achievements achieved</p>
+      </div>
+  </div>
+</div>
+<div class="jumbotron text-center" style="margin-bottom:0">
+<footer>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="footer_text">
+            <div class="mail_id" >
+                <img src="../images/mail-bulk-solid.svg" style="width:15px; height:15px;" />
+                <i>help@indoctrination.com</i>
+            </div>
+            <div class="social_media">
+                <h3>Follow us at our Social Media Pages</h3>
+                <img id="first_img" src="../images/facebook.png" style="width:15px; height:15px;" />
+                <img src="../images/twitter.png" style="width:15px; height:15px;" />
+                <img src="../images/youtube.png" style="width:15px; height:15px;"/>
+                <img src="../images/LinkedIn.png" style="width:15px; height:15px;"/>
+                <img src="../images/insta.png" style="width:15px; height:15px;"/>
+            </div>    
+            <div class="address">
+                <h3>Our Address</h3>
+                <address>
+                    <p>780, 1st floor, 12th Main,<br> 1st Cross, HAL 2nd Stage,<br> Bangalore, India 560 008
+
+                        Tel : +91 80 40740200
+                    </p>
+                </address>
+            </div>
+        </div>
+      </div>      
+    <!-- <img class="grid_4" id="footer_img" src="../images/footer.jpeg" /> -->
+    <!-- <div id="googleMap" style="width:100%;height:400px;">
+    <script>
+        function myMap() {
+        var mapProp= {
+          center:new google.maps.LatLng(51.508742,-0.120850),
+          zoom:5,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+    </script>
+        
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+    </div> -->
+
+    <!--Google map-->
+  <div class="col-sm-6">
+    <div id="map-container-google-2" class="z-depth-1-half map-container" style="width: 50px;height: 100px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15554.276835888708!2d77.6139401!3d12.9353863!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x48d008360cebcde4!2sStackroute!5e0!3m2!1sen!2sin!4v1566466085750!5m2!1sen!2sin" width="495" height="262" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>  
+  <!--Google Maps-->
+
+</footer>
+</div>
 </body>
 </html>
